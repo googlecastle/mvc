@@ -1,0 +1,38 @@
+<?php 
+
+/**
+* 
+*/
+class Category_model extends Model
+{
+	
+	function __construct()
+	{
+
+		parent::__construct();
+		
+
+	}
+
+	function view($val)
+	{
+		$st=$this->db->prepare("SELECT * FROM category where c_dewey=?");
+			$st->execute(array($val));
+			return $record=$st->fetchAll();
+			 // foreach ($record as $key => $value) {
+			 // 	echo $value['d_name'];
+			 // }
+			
+	}
+
+	public function getall($dewey)
+	{
+
+		//echo 'try this';
+
+		$st=$this->db->prepare("SELECT * FROM category where c_dewey=?");
+		$st->execute(array($dewey));
+		 return $st->rowCount();
+	}
+
+}
