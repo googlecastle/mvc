@@ -288,8 +288,26 @@ position: fixed;
                   <i class="fa fa-user fa-lg"></i> Home
                   </a>
                   </li>
+<?php 
 
-              
+
+
+
+  Session::init();
+    $username=Session::get('user');
+    if($username == "admin")
+    {
+      ?>
+<li>
+                  <a href="<?php echo URL?>addlibrarian/view">
+                  <i class="fa fa-user fa-lg"></i> Addlibrarian
+                  </a>
+                  </li>
+<?php 
+
+    }
+        ?>
+               
 
                   <li>
                   <a href="<?php echo URL?>home/logout">
