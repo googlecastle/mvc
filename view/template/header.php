@@ -19,8 +19,38 @@
  
 
 
-<style type="text/css">
 
+
+   <!-- Custom CSS -->
+    <link href="<?php echo URL?>assets/css/sb-admin.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="<?php echo URL?>assets/css//morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="<?php echo URL?>assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<style type="text/css">
+}
+ .table-hover1 tr:hover { 
+
+  background-color: skyblue;
+  
+
+
+}
+
+div.list-group a:hover { 
+
+  background-color: skyblue;
+  
+
+
+}
+
+body{
+  background-color: #eceff0 !important;
+}
  input.search-query {
   padding-right: 14px;
   padding-right: 4px \9;
@@ -35,41 +65,35 @@
 }
  .table-hover1 tr:hover { 
 
-  background-color: skyblue;
+  /*background-color: skyblue;*/
   
 
 
 }
 
-    .logos{
- width:60px;
-    height: 60px;
-    margin-top:-10px;
-
-
-  }
-
-  .deweylogo{
- width:150px;
- height:150px;
    
-
-  }
 
 div.collapse a:hover { 
   background-color: red;
+
   }
 
 div.collapse.nav a { 
   color: black;
   }
 
-  div.thumbnail:hover, div.caption h2:hover 
+  div.gta:hover, div.caption h2:hover 
   {
     background-color: red;
+
+
   }
 
 
+  span.drown:hover  h2:hover 
+  {
+    background-color: red;
+  }
 
 
 div.list-group a:hover { 
@@ -83,8 +107,10 @@ div.list-group a:hover {
 .dropdown:hover .dropdown-menu {
 
     /** Show dropdown menu */
+   
     display: block;
 }
+
   .banned{
     width:140px;
     height: 140px;
@@ -119,6 +145,16 @@ body {
 
 
 
+.yes {
+ border-top-left-radius: 10px;
+ border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+      border:2px solid orange;
+
+      margin: 0px;
+}
+
 </style>
 
 
@@ -145,6 +181,17 @@ $(document).ready(function() {
 
 
 
+</script>
+
+<script>
+$(document).ready(function(){
+    $("#hide").click(function(){
+        $("#yo").hide();
+    });
+    $("#show").click(function(){
+        $("#yo").show();
+    });
+});
 </script>
 </head>
 <body >

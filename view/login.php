@@ -1,34 +1,99 @@
 
+<style type="text/css">
+  
+  input[type="text"],input[type="password"],select,button,.yes {
+ border-top-left-radius: 10px;
+ border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+      border:2px solid orange;
 
-    <br>
-        <br>
-        <br>
-        <br>
+      margin: 0px;
+}
+.banned2{
+    width:60px;
+    height: 60px;
+    }
+</style>
+
+<?php if (isset($_REQUEST['g'])==1): ?>
+    <?php  echo "<script> alert('Wrong Username and Password')  </script>";
+       
+     ?>
+ 
+<?php endif ?>
+
+ <div class="col-sm-12" style="margin-top:100px;">
+
+
+ <div class="col-sm-12">
+ <div class="col-sm-2">
+</div> 
+
+ 
+  <div class="col-sm-8" style="padding:15px; background-color:#f2c777; border-top-left-radius: 10px;
+ border-top-right-radius: 10px;">
+
+
+
+      <div class="col-sm-2">
+        <img src="<?php echo URL?>assets/images/cirilo.jpg" class="banned2 img-circle pull-right">
+
+      </div> 
+
+
+<div class="col-sm-8">
+
+<center>
+        <h2 style="color:green;">
+      <i class="glyphicon glyphicon-save" style="color:green;"></i>Signin 
+     </h2>
+    
+    </center>
+
+
+</div> 
+
+
+
+<div class="col-sm-2">
+        <img src="<?php echo URL?>assets/images/cirilo.jpg" class="banned2 img-circle pull-left">
+
+</div> 
+</div>
+
+
+<!-- --------------------------------------------------------------------------- -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
 
-    <div class="container" >
 
-  <div class="row">
-     <div class="col-md-3">
-   
-  </div>
+<div class="col-sm-2">
 
-<!--  <div class="col-md-6">
-    <div class="bs-callout bs-callout-danger">
-    <center><h4>Login to Library System</h4></center>
-    </div>
-  </div> -->
-  
- <div class="col-md-3">
-
-
-  </div>
+</div>
 
 
 
 
-
-  </div>
+</div>
 
 
 
@@ -36,51 +101,82 @@
 
 
 
-      
-
-<div class="row">
-
-  <div class="col-md-3">
-
-        <img src="<?php echo URL ?>assets/images/cirilo.jpg" class="banned img-circle pull-right">
-
-  </div>
 
 
 
 
-  <div class="col-md-6">
 
 
-<div class="panel panel-primary">
-  <!-- Default panel contents -->
-  <div class="panel-heading"><center><b>Login Form</b></center> </div>
-  <div class="panel-body">
+
+
+
+
+
+
+
+
+
+ <div class="col-sm-12">
+
+ <div class="col-sm-2">
+</div> 
+
  
-         <form action="login/validate" method="post">
-  <div class="form-group">
-    <label for="exampleInputEmail1">Username</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" name="username" placeholder="Enter Username" required>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password" required>
-  </div>
+  <div class="col-sm-8" style="padding:15px; background-color:white; border-bottom-left-radius: 10px;
+ border-bottom-right-radius: 10px; border:2px solid #f2c777;">
+<center>
+    <p style="    color: #87919F;
+    line-height: 24px;">Enter You Userame and Password</p>
 
-  <button type="submit" class="btn btn-primary form-control" value="login" name="submit">Login</button>
+      <div class="col-sm-2">
+      </div> 
+
+
+<div class="col-sm-8">
+<form name="form" id="form" class="form-horizontal" action="<?php echo URL; ?>login/validate" method="POST">
+
+      <p>
+      <input type="text" name="username" class="form-control" style="height:45px;font:24px;" placeholder="Username " required> 
+        
+      </p>
+      <p>
+      <input type="password" name="password" class="form-control" style="height:45px;font:24px;" placeholder="Password" required> 
+        
+      </p>
+
+      <p>
+      <div class="col-sm-8" style="margin-left:100px;">
+      <center>
+      <button type="submit" class="btn btn-warning btn-block warning" style="height:45px; font:24px;">Signin</button>
+      </center>
+      </div> 
+        
+      </p>
+
 </form>
 
+</div> 
 
 
-  </div>
 
+<div class="col-sm-2">
+</div> 
+
+</center>
 
 </div>
 
 
-     
+<!-- --------------------------------------------------------------------------- -->
+
+
     
-       
+
+
+<div class="col-sm-2">
+</div>
+
+
 
 
 </div>
@@ -93,25 +189,13 @@
 
 
 
+</div>
+<br>
 
 
 
 
-
-
-  <div class="col-md-3">
-
-<img src="<?php echo URL ?>assets/images/cirilo.jpg" class="banned img-circle">
-
-  </div>
-
-  </div>
-
-      
-
-      <hr class="panel-warning">
-
- 
-
-    </div><!--/.container-->
-
+<br>
+<br>
+<br>
+<br>

@@ -12,7 +12,7 @@ class Category extends Controllers
 			$this->isloggin();
 	}
 
-	function delete($val)
+	function view($val)
 	{
 	
 		$record = $this->model->view($val);

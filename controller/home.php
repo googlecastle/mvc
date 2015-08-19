@@ -9,13 +9,17 @@ class Home extends Controllers
 	{
 		
 		parent::__construct();
-		$this->isloggin();
-		
+
 	}
 
 	function index()
 	{
-		$this->view->render('home');
+
+		$result= $this->model->viewall();
+		$this->view->record = $this->model->view();
+		$this->view->render('home',$result);
+
+	
 	}
 
 	function validate()
@@ -32,6 +36,10 @@ class Home extends Controllers
 		header('Location: ../login');
 		exit;
 	}
+
+
+
+
 
 
 	function isloggin()

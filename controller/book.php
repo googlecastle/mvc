@@ -7,14 +7,15 @@ class Book extends Controllers
 	
 	function __construct()
 	{	
-		parent::__construct();
-		$this->isloggin();
+	
+			parent::__construct();
+			$this->isloggin();
 	}
 
-
-	function index()
+	function view($val)
 	{
-		$record = $this->model->view();
+	
+		$record = $this->model->view($val);
 
 		$this->view->render('book',$record);
 
@@ -26,13 +27,11 @@ class Book extends Controllers
 		echo "home validate";
 	}
 
-	function get($v)
+	function get($val)
 	{
 		$this->view->t= $this->model->getall($val);
 		//return $this->model->getall($val);
 	}
-	
-
 
 	function isloggin()
 	{
@@ -44,5 +43,7 @@ class Book extends Controllers
 			exit;
 		}
 	}
+	
+
 
 }

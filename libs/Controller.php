@@ -10,6 +10,7 @@ class Controllers
 	{
 
 		$this->view=new View();
+
 	}
 
 	public function loadModel($name)
@@ -21,6 +22,12 @@ class Controllers
 			require 'model/'.$name.'_model.php';
 			$namemodel = $name.'_model';
 			$this->model=new $namemodel();
+
+
+
+
+
+			
 		}
 	}
 

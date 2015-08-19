@@ -1,52 +1,72 @@
 
+<style type="text/css">
+  
+  .yes {
+ border-top-left-radius: 10px;
+ border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+      border:2px solid orange;
+
+  
+}
+
+
+a:hover{
+  text-decoration:none;
+}
+
+</style>
+
+
+<div style="margin-bottom:500px; margin-top:40px;" >
+ <div class="col-sm-10" style="margin-left:90px;" >
+ <center>
+<form action="<?php echo URL; ?>result/view" method="POST" style="padding:0px;margin:0px;">
+ 
+  <div class=" yes" style="padding:15px; background-color:#f2c777; border-top-left-radius: 10px;
+ border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;">
+
+      <input type="text" name="search" class="col-sm-5 yes" style="height:45px; margin-right:5px; font:24px;border:3px solid orange;" placeholder="Search" required>
+        
+        <select class="col-sm-3 yes" style="height:45px; margin-right:5px; font:24px;">
+  <option value="">All Books</option>
+ 
+</select>
+
+<select class="col-sm-3 yes" style="height:45px; margin-right:5px; font:24px;" name="br">
+  <option value="title">Search Title only</option>
+  <option value="author">Search Author</option>
+  <option value="isbn">Search ISBN</option>
+
+</select>
+
+      <button type="submit" class="btn btn-warning btn-large warning" style="height:45px; margin-left:0px; font:24px;">Search</button>
 
 
 
 
-<!-- Carousel
-    ================================================== -->
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="item active">
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Example headline.</h1>
-              <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAGZmZgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAFVVVQAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>One more for good measure.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-    </div><!-- /.carousel -->
+
+
+    </div>
+
+
+</form>
+</center>
+
+</div>
+
+<br>
+
+
+
+
+
+
+
+
 
 
 
@@ -54,70 +74,165 @@
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
 
-    <div class="container marketing">
-
-      <!-- Three columns of text below the carousel -->
-      <div class="row">
-        <div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 140px; height: 140px;">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 140px; height: 140px;">
-          <h2>Heading</h2>
-          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 140px; height: 140px;">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-      </div><!-- /.row -->
+    
 
 
-      <!-- START THE FEATURETTES -->
+    <!-- Second    ================================================== -->
 
-      <hr class="featurette-divider">
 
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-        </div>
-      </div>
 
-      <hr class="featurette-divider">
+  <div class="col-md-9 " style="margin-left:150px;margin-top:30px;">
 
-      <div class="row featurette">
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-        </div>
-        <div class="col-md-7">
-          <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-      </div>
 
-      <hr class="featurette-divider">
 
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-        </div>
-      </div>
+ <!--  <center><h1 style="margin:0;">Dewey Decimal System</h1></center> -->
+<?php $l=99; foreach ($this->record as $value): ?>
+<?php  if ($l==899) {     ?>
+         <div class="col-md-3" style="margin-left:245px;"> 
+         <?php  
+      }else{
+        ?>
+         <div class="col-md-3" style="margin:-8 -8 -8 -8px; padding-bottom:20px;"> 
+         <?php       }
+           
+
+           ?>
+    <?php $val=$value['d_id']; ?>
+    <?php $val2=$value['did']; ?>
+        <a href="<?php echo URL ?>category/view/<?php echo $value['d_id'] ?>">
+    <div class="thumbnail gta yes" >
+      <!-- <img data-src="holder.js/100%x100" alt="..."> -->
+      <!-- <img src="<?php echo URL ?>assets/images/cirilo.jpg"  class="deweylogo" > -->
+     
+        <?php if ($l==99): ?>
+        
+       <span class="drown">
+       <center><h4 style="background-color:#f6f6f6;width:100px;height:30px;padding-top:5px;margin-top:5px;" class="yes"><span style="color:orange;font-weight:bold;" ><?php echo $value['d_id']."-0".$l; ?></span></h4></center> 
+          <?php else: ?>
+       <center><h4 style="background-color:#f6f6f6;width:100px;height:30px;padding-top:5px;margin-top:5px;" class="yes"><span style="color:orange;font-weight:bold;"><?php echo $value['d_id']."-".$l; ?></span></h4></center> 
+          </span>
+          
+        <?php endif ?>
+        <p ><center><?php echo $value['d_name']; ?></center></p> 
+   
+      <?php $g=$value['d_id']; ?>
+        
+
+      
+      <center><p style="margin-top:-10px;"><span style="color:orange;"><b>Category(<?php echo home_model::countcategory($g); ?>)</b></span></p></center> 
+   <center>
+  <p ><a href="<?php echo URL ?>addcategory/view/<?php echo $val ?>" style="background-color:blue;color:white;" class=" img-circle btn  yes" role="button">Add Category</a> </p> 
+   
+    </center>
+     <!-- <p class="" style="width:50px;height:50px;background-color:red;">Add Category</p> -->
+      
+       
+  
+  </div>
+
+</a>
+
+ 
+
+
+
+ 
+      
+
+
+
+
+
+
+
+                  </div> 
+      
+<?php $l=$l+100;  endforeach; ?>
+      
+
+</div>
+
+   <!-- Third    ================================================== -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- fourth    ================================================== -->
 
       <hr class="featurette-divider">
 
       <!-- /END THE FEATURETTES -->
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>

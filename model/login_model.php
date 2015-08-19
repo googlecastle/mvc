@@ -3,7 +3,7 @@
 /**
 * 
 */
-class Login_model extends Model
+class Login_Model extends Model
 {
 	
 	function __construct()
@@ -22,9 +22,24 @@ class Login_model extends Model
 			if ($count>0) {
 				Session::init();
 				Session::set('loggin',true); 
-				header('Location: ../home/');
+				Session::set('user',$_POST['username']); 
+				$h= Session::get('user');
+				$st=$this->db->prepare("select * from librarian where username = ?");
+				$st->execute(array($h));
+				$rec=$st->fetch(PDO::FETCH_ASSOC);
+				$s=$rec['username'];
+
+				if ($s==$h) {
+					header('Location: ../Dashboard/view');
+				}
+				else
+				{
+				header("Location: ../login/?g=1");
+
+				}
+				
 			}else{
-				header('Location: ../login');
+				header('Location: ../login/?g=1');
 			}
 	}
 
